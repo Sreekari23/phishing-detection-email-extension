@@ -1,0 +1,5 @@
+things we can always further add :
+
+    Add a button to trigger analysis manually in the popup
+    Show loading spinners
+    Clean up old analysis when switching emails

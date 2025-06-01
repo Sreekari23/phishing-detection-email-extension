@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Phishing Detector</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="popup.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Phishing Detector</h1>
+  </header>
+  <main>
+    <form id="url-form">
+      <input type="text" id="urlInput" placeholder="Enter suspicious URL" />
+      <button type="submit" id="checkButton">Check</button>
+    </form>
+
+    <div class="result"></div>
+
+    <h3>Summary:</h3>
+    <pre id="summary"></pre>
+
+    <h3>Threat Phrases:</h3>
+    <pre id="phrases"></pre>
+
+    <h3>Recommendations:</h3>
+    <pre id="recommendations"></pre>
+  </main>
+</body>
+
+</html>

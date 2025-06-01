@@ -1,0 +1,30 @@
+{
+  "name": "Phishing Detection",
+  "description": "Detect whether website is malicious or not",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+      "activeTab",
+      "scripting",
+      "storage",
+      "http://127.0.0.1:8000/"
+    ],
+    "host_permissions": [
+      "https://mail.google.com/*"
+    ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "phish.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://mail.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "content_security_policy": {
+    "script-src": "self",
+    "object-src": "self"
+  }
+}
